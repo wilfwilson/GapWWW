@@ -33,3 +33,5 @@ jobs:
         run: pip3 install PyGithub requests python-dateutil GitPython
       - name: "Run GAP script dev/releases/update_website.py"
         run: python -u ./tmp/gap/dev/releases/update_website.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
