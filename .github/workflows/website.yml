@@ -22,10 +22,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: "Clone the GAP master to get release scripts"
+      - name: "Clone GAP master to get its release scripts"
         shell: bash
         run: |
-          git clone -b master --depth=1 https://github.com/gap-system/gap.git tmp/gap
+          git clone -b website-scripts --depth=1 https://github.com/wilfwilson/gap.git tmp/gap
       - name: "Set up Python"
         uses: actions/setup-python@v2
       - name: "Install Python modules"
