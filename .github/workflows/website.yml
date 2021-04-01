@@ -34,3 +34,5 @@ jobs:
         run: python -u ./tmp/gap/dev/releases/update_website.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Make a PR"
+        uses: peter-evans/create-pull-request@v3
