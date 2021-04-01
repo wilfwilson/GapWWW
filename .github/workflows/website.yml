@@ -29,7 +29,6 @@ jobs:
       - name: "Set up Python"
         uses: actions/setup-python@v2
       - name: "Install Python modules"
-        # TODO Remove GitPython, it is unnecessary
         run: pip3 install PyGithub requests python-dateutil
       - name: "Run GAP script dev/releases/update_website.py"
         run: python -u ./tmp/gap/dev/releases/update_website.py

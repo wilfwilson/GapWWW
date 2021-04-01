@@ -11,24 +11,24 @@
 FILENAME=`basename ${0}`
 SCRIPT=${FILENAME%.sh}
 
-if [ "$#" == "0" ] || [ "$#" -ge "3" ]; then
-  echo "Usage: ${SCRIPT}.sh: <pkg-dir> [gap-exe (default: gap)]"
+if [ "$#" != "3" ] ; then
+  echo "Usage: ${SCRIPT}.sh: <pkg-dir> <gap-exe> <tmp-dir>"
   exit 1
 fi;
 
 PKG_DIR=${1} 
-if [ "${#}" == "2" ]; then
-  GAP_EXE=${2}
-else
-  GAP_EXE="gap"
-fi
+GAP_EXE=${2}
+TMP_DIR=${3}
 
-if [ ! -d ${1} ]; then
+if [ ! -d ${1} ] ; then
   echo "<pkg-dir> is not a directory: ${PKG_DIR}"
+  exit 2
+elif [ ! -d ${3} ] ; then
+  echo "<tmp-dir> is not a directory: ${TMP_DIR}"
   exit 2
 fi
 
-PACKAGEINFO_PATHS="${TMPDIR}/_tmp_packageinfo_paths.tmp"
+PACKAGEINFO_PATHS="${TMP_DIR}/_tmp_packageinfo_paths.tmp"
 
 # We use '-maxdepth 2' since e.g. some packages contain others (e.g. hap)
 find ${PKG_DIR} -maxdepth 2 -name 'PackageInfo.g' > ${PACKAGEINFO_PATHS}
