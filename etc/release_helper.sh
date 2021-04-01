@@ -4,12 +4,14 @@
 FILENAME=`basename ${0}`
 SCRIPT=${FILENAME%.sh}
 
-if [ "$#" == "0" ] || [ "$#" -ge "3" ]; then
-  echo "Usage: ${SCRIPT}.sh: <gaproot> <release_file>"
+if [ "$#" != "3" ]; then
+  echo "Usage: ${SCRIPT}.sh: <gaproot> <release_file> <tmp_dir>"
   exit 1
 fi;
 
-PACKAGEINFO_PATHS="${TMPDIR}/_tmp_packageinfo_paths.tmp"
+TMP_DIR=${3}
+
+PACKAGEINFO_PATHS="${TMP_DIR}/_tmp_packageinfo_paths.tmp"
 
 # We use '-maxdepth 2' since e.g. some packages contain others (e.g. hap)
 find ${1}/pkg -maxdepth 2 -name 'PackageInfo.g' > ${PACKAGEINFO_PATHS}
