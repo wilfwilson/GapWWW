@@ -22,12 +22,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: "Clone the GAP master branch to get the release scripts"
+      - name: "Clone the GAP master to get release scripts"
         shell: bash
         run: |
-          git clone https://github.com/gap-system/gap.git gap
-          ls gap/
+          git clone -b master --depth=1 https://github.com/gap-system/gap.git tmp/gap
       - name: "Set up Python"
         uses: actions/setup-python@v2
       - name: "Install Python modules"
-        run: pip3 install PyGithub requests python-dateutil
+        # TODO Remove GitPython, it is unnecessary
+        run: pip3 install PyGithub requests python-dateutil GitPython
+      - name: "Run GAP script dev/releases/update_website.py"
+        run: python -u ./tmp/gap/dev/releases/update_website.py
