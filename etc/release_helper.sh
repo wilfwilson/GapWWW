@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This script is called by... as part of updating GapWWW for a new GAP release
 
 FILENAME=`basename ${0}`

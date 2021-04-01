@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Script to regenerate the information in the _Packages directory from the
 # PackageInfo.g files of the packages contained in the directory specified
