@@ -1,0 +1,33 @@
+# Updates website for a GAP release
+name: "Update website"
+
+on: 
+  push:
+    branches:
+      - website-scripts # This is temporary; currently you can only manually dispatch workflows those exist on the master branch, and obviously this stuff isn't merged yet. I will test it on my fork before making a PR.
+  workflow_dispatch:
+    inputs:
+      input1:
+        description: "Input #1"
+        required: true
+        default: "do we need inputs?"
+      tag:
+        description: "Release tag name"
+
+jobs:
+  website:
+    name: "Update the website based on a GAP release"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Clone the GAP master branch to get the release scripts"
+        shell: bash
+        run: |
+          git clone https://github.com/gap-system/gap.git gap
+          ls gap/
+      - name: "Set up Python"
+        uses: actions/setup-python@v2
+      - name: "Install Python modules"
+        run: pip3 install PyGithub requests python-dateutil
