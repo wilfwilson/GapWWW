@@ -1,0 +1,62 @@
+[
+  {
+    "bytes": 37115519,
+    "name": "gap-4.12.0-core.tar.gz",
+    "sha256": "60a2426a21341983572fb3b4fb6022d08f968baeb9698b0f384796bb2b57744b",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0-core.tar.gz"
+  },
+  {
+    "bytes": 40616762,
+    "name": "gap-4.12.0-core.zip",
+    "sha256": "be6b370ee464620ef4dbbfcbdaa36898492d654db65db745cfc4bf8b02b1d2c1",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0-core.zip"
+  },
+  {
+    "bytes": 494591025,
+    "name": "gap-4.12.0-x86.exe",
+    "sha256": "954310446cb82c467fcf8d6b9db9c8d07ab2815f3f720407ed13cfa8f50f41e9",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0-x86.exe"
+  },
+  {
+    "bytes": 487781841,
+    "name": "gap-4.12.0-x86_64.exe",
+    "sha256": "971923d5687e619a678c47475e37e1a5b2eb273c7a7205cc6299e7e99ae89fa0",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0-x86_64.exe"
+  },
+  {
+    "bytes": 498101762,
+    "name": "gap-4.12.0.tar.gz",
+    "sha256": "b90a6d049a11a514d79f9080e76bdc9ad3a35ae053b2e0eaf7171162dfbb0b3a",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0.tar.gz"
+  },
+  {
+    "bytes": 535215123,
+    "name": "gap-4.12.0.zip",
+    "sha256": "25825051bce734bba9a391e4409d005aa7d755873be923de18994c8df981d820",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/gap-4.12.0.zip"
+  },
+  {
+    "bytes": 94064241,
+    "name": "packages-required-v4.12.0.tar.gz",
+    "sha256": "6bdf9a234e2abb95b72439cabc9079ac40d0f265592bada8d22d792447ae6eac",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/packages-required-v4.12.0.tar.gz"
+  },
+  {
+    "bytes": 98317910,
+    "name": "packages-required-v4.12.0.zip",
+    "sha256": "121b8ac95895e5512aa13b52ea9fe7a48e5047abb63241da59616edab3ba4968",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/packages-required-v4.12.0.zip"
+  },
+  {
+    "bytes": 462518874,
+    "name": "packages-v4.12.0.tar.gz",
+    "sha256": "0ddb3eb8d8d0c8859c636022de856ce9a5ae2b66f13b0a23d8d3516322f3b944",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/packages-v4.12.0.tar.gz"
+  },
+  {
+    "bytes": 493634651,
+    "name": "packages-v4.12.0.zip",
+    "sha256": "f0b7f92d188db9f50f141ea199b28be3209f069ba217c0b4da3a10931b24f840",
+    "url": "https://github.com/wilfwilson/gap/releases/download/v4.12.0/packages-v4.12.0.zip"
+  }
+]
