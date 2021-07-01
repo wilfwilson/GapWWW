@@ -32,7 +32,7 @@ jobs:
       - name: "Install the required Python modules"
         run: pip3 install PyGithub requests python-dateutil
       - name: "Run the GAP dev release script for updating the website"
-        run: python -u ./tmp/gap/dev/releases/update_website.py
+        run: python -u ./tmp/gap/dev/releases/update_website.py --gap-fork wilfwilson
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Make a pull request to the master branch of this repository"
